@@ -211,7 +211,7 @@ body {
 
 /* Content Sections */
 .content {
-  height: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -280,6 +280,8 @@ body {
   }
 
   .product-box {
+    width: 150px; /* Maintain the same width */
+    height: 250px; /* Maintain the same height */
     margin-bottom: 20px; /* Space between products */
   }
 }
