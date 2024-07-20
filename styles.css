@@ -182,9 +182,12 @@ body {
     margin-right: 0;
   }
 
-  .navbar {
-    background: rgba(17, 17, 17, 0.8); /* Maintain glass effect */
-    backdrop-filter: blur(10px);
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
   }
 }
 
@@ -201,9 +204,12 @@ body {
     margin-right: 0;
   }
 
-  .navbar {
-    background: rgba(17, 17, 17, 0.8); /* Maintain glass effect */
-    backdrop-filter: blur(10px);
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
   }
 }
 
@@ -319,17 +325,24 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .nav-list {
-    display: none;
+  .glass-card {
+    width: 90%;
+    padding: 50px;
   }
 
   .hamburger-menu {
     display: block;
   }
 
+  .nav-list {
+    display: none;
+  }
+
   .navbar {
     justify-content: space-between;
     padding: 15px 20px;
+    background: rgba(17, 17, 17, 0.8); /* Ensure glass effect on mobile */
+    backdrop-filter: blur(10px); /* Ensure glass effect on mobile */
   }
 
   .hero, .content {
@@ -344,16 +357,16 @@ body {
   font-style: normal;
 }
 
-@media (max-width: 768px) {
-  .glass-card {
-    width: 90%;
-    padding: 50px;
-  }
-}
-
 @media (max-width: 480px) {
   .glass-card {
     width: 100%;
     padding: 30px;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: rgba(17, 17, 17, 0.8); /* Ensure glass effect on mobile */
+    backdrop-filter: blur(10px); /* Ensure glass effect on mobile */
   }
 }
