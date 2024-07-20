@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to NexZap</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home"><img src="nexlogo.png" alt="NexZap Logo" class="nav-logo" /></a>
+      <button class="hamburger-menu" aria-label="Open navigation menu">&#9776;</button>
+      <ul class="nav-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#products">PRODUCTS</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Full-screen overlay menu for mobile view -->
+  <div id="overlay-menu" class="overlay-menu">
+    <button class="close-menu" aria-label="Close navigation menu">&times;</button>
+    <ul class="overlay-nav-list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+    </ul>
+  </div>
+
+  <section class="hero" id="home">
+    
+    <div class="logo-container">
+		
+      <img src="logo.png" alt="NexZap Logo" class="logo-image" />
+    </div>
+  </section>
+
+  <section class="content" id="products">
+  <div class="section-content">
+    <h2>Products</h2>
+    <p>A simple, elegant interface so you can start sending emails in minutes. It fits right into your code with SDKs for your favorite programming languages.</p>
+    <div class="product-boxes">
+      <div class="product-box">Product 1</div>
+      <div class="product-box">Product 2</div>
+      <div class="product-box">Product 3</div>
+      <div class="product-box">Product 4</div>
+      <div class="product-box">Product 5</div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="content" id="services">
+    <div class="section-content">
+      <h2>Services</h2>
+      <p>We are a team of engineers who love building tools for other engineers. Our goal is to create the email platform we've always wished we had — one that just works.</p>
+    </div>
+  </section>
+
+  <section class="content" id="about">
+    <div class="section-content">
+      <h2>About Us</h2>
+      <p>Learn more about our mission and the team behind NexZap.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2023 NexZap. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
