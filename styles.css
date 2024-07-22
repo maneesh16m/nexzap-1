@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #001f3f;
+   background: linear-gradient(to bottom, #070F2B, #000000);
   color: #fff;
 }
 
@@ -234,17 +234,24 @@ body {
   align-items: center;
   padding: 80px 20px 20px;
   text-align: center;
-  background-color: #222;
-  color: #001f3f;
+  background-color: #ffff;
+  color: black;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .content:nth-child(even) {
-  background-color: #00274d;
-}
+  background: radial-gradient(#bfc0c0 0%, #000d1a 250%, #00001a 200%);
 
+}
+.content:nth-child(odd) {
+ background: linear-gradient(to bottom, #070F2B, #000000);
+ color: white;
+}
+.content:nth-child(even) {
+  background-color:#bfdbf7 ;
+}
 .content.visible {
   opacity: 1;
   transform: translateY(0);
