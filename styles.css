@@ -14,12 +14,12 @@ body {
   left: 0;
   background: (rgba(0, 31, 63, 0.8));
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 30px rgba(20, 20, 20, 10.3);
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 0;
+  padding: -7px 0;
 }
 
 .nav-container {
@@ -27,13 +27,16 @@ body {
   align-items: center;
   width: 100%; /* Ensure the container spans the full width */
   justify-content: space-between; /* Distribute space between items */
-  padding: 0 30px; /* Add padding to the sides */
+  padding: 5px 30px; /* Add padding to the sides */
 }
 
 .nav-logo {
-  height: 35px;
-  margin-left: 20px; /* Add margin to move the logo to the left */
-  opacity: 80%;
+  height: 40px;
+  margin-top: 20px;
+  scale: 420%;
+  margin-left: 95px; /* Add margin to move the logo to the left */
+ 
+  opacity: 100%;
 }
 
 .hamburger-menu {
@@ -139,8 +142,9 @@ body {
 
 .logo-image {
   width: auto;  /* Adjust size as needed */
-  height: 650px; /* Adjust size as needed */
-  margin-top: -20px; /* Adjust margin as needed */
+  height: 750px; /* Adjust size as needed */
+  margin-top: -100px; /* Adjust margin as needed */
+  margin-left: 350px;
   
   opacity: 0; /* Start with the logo being invisible */
   animation: fadeIn 3s ease forwards; /* Fade-in animation */
@@ -378,12 +382,88 @@ body {
   }
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+     .logolap3 {
+        width: 100%;
+        height: auto;
+        margin-top: -500px;
+        margin-left: -500px;
+    }
 
+    .subheadline {
+        margin-right: 0;
+        margin-bottom: 220px;
+		margin-top: -500px;
+		
+    }
 
-.logolap3 {
-	Width: 930px;
-	Height: 930px;
-	margin-top: 300px;
-	
-	
+   
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+   
+
+    .subheadline {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .logolap3 {
+        width: 90%;
+        height: auto;
+        margin-top: 0;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+ 
+
+    .subheadline {
+        margin-right: 10px;
+    }
+
+    .logolap3 {
+        width: 80%;
+        height: auto;
+        margin-top: 100px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    
+    
+
+    .subheadline {
+        margin-right: 20px;
+    }
+
+    .logolap3 {
+        width: 70%;
+        height: auto;
+        margin-top: 100px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+
+    .subheadline {
+        margin-right: 20px;
+	
+		margin-top: 200px;
+		
+        text-align: center;
+    }
+
+    .logolap3 {
+        width: 60%;
+        height: auto;
+        margin-top: 100px;
+    }
+}
+
