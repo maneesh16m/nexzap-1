@@ -12,31 +12,23 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: (rgba(0, 31, 63, 0.8));
-  backdrop-filter: blur(10px);
   box-shadow: 0 1px 30px rgba(20, 20, 20, 10.3);
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: -7px 0;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   width: 100%; /* Ensure the container spans the full width */
-  height:80px;
   justify-content: space-between; /* Distribute space between items */
   padding: 5px 30px; /* Add padding to the sides */
 }
 
 .nav-logo {
   height: 40px;
-  margin-top: 20px;
-  scale: 420%;
-  margin-left: 95px; /* Add margin to move the logo to the left */
- 
   opacity: 100%;
 }
 
@@ -115,106 +107,117 @@ body {
   cursor: pointer;
 }
 
+
+
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-image-url.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: white;
   padding: 20px;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-.logo-container {
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subheadline {
+  flex: 1;
   display: flex;
   align-items: center;
-  font-size: 100px;
-  font-weight: bold;
-  font-family: 'FMBolyarSansPro', sans-serif;
-  position: relative;
-  z-index: 2; /* Ensure it appears above the glass card */
-  overflow: hidden; /* Ensure the logo is contained */
-}
-
-.logo-image {
-  width: auto;  /* Adjust size as needed */
-  height: 750px; /* Adjust size as needed */
-  margin-top: -100px; /* Adjust margin as needed */
-  margin-left: 350px;
-  
-  opacity: 0; /* Start with the logo being invisible */
-  animation: fadeIn 3s ease forwards; /* Fade-in animation */
-  transform: scale(0.9); /* Start with a slightly zoomed-out logo */
+  text-align: left;
+  opacity: 0; /* Start with the text being invisible */
   animation: fadeInZoom 3s ease forwards; /* Fade-in and zoom animation */
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0; /* Start fully transparent */
-  }
-  100% {
-    opacity: 1; /* End fully opaque */
-  }
+.subheadline h1 {
+  font-size: 2rem;
+  margin: 0;
+  max-width: 600px;
+}
+
+.logolap3 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  width: 100%;
+  max-height: 750px;
+  height: auto;
+  opacity: 0;
+  animation: fadeInZoom 3s ease forwards;
 }
 
 @keyframes fadeInZoom {
   0% {
-    opacity: 0; /* Start fully transparent */
-    transform: scale(0.9); /* Start with a slightly zoomed-out logo */
+    opacity: 0;
+    transform: scale(0.5);
   }
   100% {
-    opacity: 1; /* End fully opaque */
-    transform: scale(1); /* End with the logo at its original size */
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .logo-container {
-    font-size: 10vw; /* Adjust font size as needed */
-    margin-left: 0;
-    margin-bottom: 320px;
+  .hero {
+    padding-top: 100px; /* Adjust padding to avoid navbar overlap */
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subheadline {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .subheadline h1 {
+    font-size: 1.5rem;
   }
 
   .logo-image {
-    height: 200px; /* Adjust size as needed */
-    margin-top: 0;
-    margin-right: 0;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  .nav-list {
-    display: none;
+    max-height: 400px;
   }
 }
 
 @media (max-width: 480px) {
-  .logo-container {
-    font-size: 8vw; /* Adjust font size as needed */
-    margin-left: 0;
-    margin-bottom: 320px;
+  .hero {
+    padding-top: 120px; /* Adjust padding to avoid navbar overlap */
+  }
+  
+  .subheadline h1 {
+    font-size: 1.2rem;
   }
 
   .logo-image {
-    height: 200px; /* Adjust size as needed */
-    margin-top: 0;
-    margin-right: 0;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  .nav-list {
-    display: none;
+    max-height: 300px;
   }
 }
 
@@ -229,6 +232,78 @@ body {
   background: linear-gradient(120deg, rgba(255, 255, 255, 0.01), transparent 90%);
   pointer-events: none;
 }
+
+
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .subheadline h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo-image {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 150px; /* Adjust padding to avoid navbar overlap */
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subheadline {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .subheadline h1 {
+    font-size: 1.5rem;
+  }
+
+  .logo-image {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 170px; /* Adjust padding to avoid navbar overlap */
+  }
+  
+  .subheadline h1 {
+    font-size: 1.2rem;
+  }
+
+  .logo-image {
+    max-height: 300px;
+  }
+}
+
+/* Torchlight Effect */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.01), transparent 90%);
+  pointer-events: none;
+}
+
+
+
+
 
 /* Content Sections */
 .content {
@@ -298,7 +373,7 @@ body {
 }
 
 .product-box:hover {
-  transform: scale(1.05);
+  transform: scale(1.5);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -337,10 +412,7 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .glass-card {
-    width: 90%;
-    padding: 50px;
-  }
+  
 
   .hamburger-menu {
     display: block;
@@ -348,13 +420,6 @@ body {
 
   .nav-list {
     display: none;
-  }
-
-  .navbar {
-    justify-content: space-between;
-    padding: 15px 20px;
-    background: rgba(17, 17, 17, 0.8); /* Ensure glass effect on mobile */
-    backdrop-filter: blur(10px); /* Ensure glass effect on mobile */
   }
 
   .hero, .content {
@@ -370,101 +435,17 @@ body {
 }
 
 @media (max-width: 480px) {
-  .glass-card {
-    width: 100%;
-    padding: 30px;
-  }
 
   .navbar {
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 5px;
     background: rgba(17, 17, 17, 0.8); /* Ensure glass effect on mobile */
     backdrop-filter: blur(10px); /* Ensure glass effect on mobile */
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-     .logolap3 {
-        width: 100%;
-        height: auto;
-        margin-top: -500px;
-        margin-left: -500px;
-    }
-
-    .subheadline {
-        margin-right: 0;
-        margin-bottom: 220px;
-		margin-top: -500px;
-		
-    }
-
-   
+@media (min-width:769px){
+  .logo-image{
+    padding-top: 150px;
+  }
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-   
-
-    .subheadline {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .logolap3 {
-        width: 90%;
-        height: auto;
-        margin-top: 0;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
- 
-
-    .subheadline {
-        margin-right: 10px;
-    }
-
-    .logolap3 {
-        width: 80%;
-        height: auto;
-        margin-top: 100px;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    
-    
-
-    .subheadline {
-        margin-right: 20px;
-    }
-
-    .logolap3 {
-        width: 70%;
-        height: auto;
-        margin-top: 100px;
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
-
-    .subheadline {
-        margin-right: 20px;
-	
-		margin-top: 200px;
-		
-        text-align: center;
-    }
-
-    .logolap3 {
-        width: 60%;
-        height: auto;
-        margin-top: 100px;
-    }
-}
-
