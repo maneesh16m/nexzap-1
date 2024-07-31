@@ -30,11 +30,25 @@ body {
   padding: 5px 30px; /* Add padding to the sides */
 }
 
+/* Keyframes for slow blinking animation */
+@keyframes blink {
+  0% {
+    filter: brightness(0.2); /* Increased brightness */
+  }
+  100% {
+    filter: brightness(3); /* Increased brightness */
+  }
+}
+
 .nav-logo {
   height: 45px;
-  width:fit-content;
-  opacity: 100%;
+  width: fit-content;
+  animation: blink 3s; /* Adjusted duration for slower blinking */
+  transition: filter 0.5s ease; /* Smooth transition for brightness change */
+  filter: brightness(3);
 }
+
+
 
 .hamburger-menu {
   font-size: 24px;
