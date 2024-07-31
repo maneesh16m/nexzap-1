@@ -97,9 +97,6 @@ body {
 }
 
 
-
-
-
 .overlay-nav-list {
   list-style: none;
   padding: 0;
@@ -320,43 +317,34 @@ body {
   text-align: center;
   background: linear-gradient(to right bottom, #9e66c6, #6027e1);
   color: white;
-  text-align: center;
-  max-height: fit-content;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
+  transform-origin: center center; /* Ensure scaling is centered */
 }
 
+/* Hover Effect for Larger Screens */
 .product-box:hover {
   transform: scale(1.5);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-
-
-@media (min-width: 769px) {
-  .product-boxes {
-    flex-direction: row; /* Stack items horizontally */
-    flex-wrap: wrap; /* Allow wrapping to next line if necessary */
-    justify-content: center; /* Center items horizontally */
-  }
-
-  .product-box {
-    margin-bottom: 0; /* Remove bottom margin for horizontal layout */
-  }
-}
-
-
-
-
+/* Styles for Screens 768px and Below */
 @media (max-width: 768px) {
   .product-boxes {
     flex-direction: column; /* Stack items vertically */
     align-items: center;
+    gap: 30px; /* Add spacing between items */
   }
 
   .product-box {
-    width: 80%; /* Adjust width for better responsiveness */
+    width: 90%; /* Adjust width for better responsiveness */
+    max-width: 400px; /* Limit maximum width */
     margin-bottom: 20px; /* Space between products */
+    /* Scale down the hover effect to fit within the viewport */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .product-box:hover {
+    transform: scale(1.2); /* Reduce scale to fit smaller screens */
   }
 }
 
