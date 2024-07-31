@@ -323,7 +323,7 @@ body {
 
 /* Hover Effect for Larger Screens */
 .product-box:hover {
-  transform: scale(1.5);
+  transform: scale(1.4);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
