@@ -339,6 +339,8 @@ body {
   color: white;
   transition: transform 0.3s, box-shadow 0.3s;
   transform-origin: center center; /* Ensure scaling is centered */
+  display: flex; 
+  flex-direction: column;
 }
 
 /* Hover Effect for Larger Screens */
@@ -379,6 +381,7 @@ body {
 .button-wrapper {
   display: flex;
   justify-content: center;
+  margin-top: auto;
 }
 
 .button-wrapper button {
