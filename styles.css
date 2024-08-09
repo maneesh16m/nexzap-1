@@ -28,7 +28,6 @@ body {
   align-items: center;
   width: 100%; /* Ensure the container spans the full width */
   justify-content: space-between; /* Distribute space between items */
-  padding: 5px 30px; /* Add padding to the sides */
 }
 
 .nav-logo {
@@ -242,7 +241,7 @@ body {
 
 @media (max-width: 480px) {
   .hero {
-    padding-top: 120px; /* Adjust padding to avoid navbar overlap */
+    padding-top: 120px;
   }
 
   .subheadline h1 {
@@ -345,7 +344,7 @@ body {
 
 /* Hover Effect for Larger Screens */
 .product-box:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -365,7 +364,7 @@ body {
   }
 
   .product-box:hover {
-    transform: scale(1.2); /* Reduce scale to fit smaller screens */
+    transform: scale(1.05); /* Reduce scale to fit smaller screens */
   }
 }
 
