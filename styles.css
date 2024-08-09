@@ -1,8 +1,8 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom, #070F2B, #000000);
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to bottom, #070f2b, #000000);
   color: #fff;
 }
 
@@ -20,6 +20,7 @@ body {
   background: rgba(17, 17, 17, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
 }
 
 .nav-container {
@@ -30,25 +31,10 @@ body {
   padding: 5px 30px; /* Add padding to the sides */
 }
 
-/* Keyframes for slow blinking animation */
-@keyframes blink {
-  0% {
-    filter: brightness(0.2); /* Increased brightness */
-  }
-  100% {
-    filter: brightness(3); /* Increased brightness */
-  }
-}
-
 .nav-logo {
   height: 45px;
   width: fit-content;
-  animation: blink 3s; /* Adjusted duration for slower blinking */
-  transition: filter 0.5s ease; /* Smooth transition for brightness change */
-  filter: brightness(3);
 }
-
-
 
 .hamburger-menu {
   font-size: 24px;
@@ -83,7 +69,6 @@ body {
 }
 
 /* Full-screen overlay menu for mobile view */
-
 .overlay-menu {
   position: fixed;
   top: 0;
@@ -110,7 +95,6 @@ body {
   cursor: pointer;
 }
 
-
 .overlay-nav-list {
   list-style: none;
   padding: 0;
@@ -127,8 +111,6 @@ body {
   text-decoration: none;
 }
 
-
-
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block;
@@ -139,11 +121,9 @@ body {
   }
 }
 
-
-
 /* Hero Section */
 .hero {
-  background: red, url('your-image-url.jpg') no-repeat center center/cover;
+  background: red, url("your-image-url.jpg") no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -197,6 +177,28 @@ body {
   height: auto;
   opacity: 0;
   animation: fadeInZoom 3s ease forwards;
+}
+
+@-webkit-keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes fadeInZoom {
@@ -255,13 +257,17 @@ body {
 
 /* Torchlight Effect */
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 120%;
   height: 100%;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.01), transparent 90%);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.01),
+    transparent 90%
+  );
   pointer-events: none;
 }
 
@@ -285,8 +291,8 @@ body {
   background: radial-gradient(#bfc0c0 0%, #000d1a 250%, #00001a 200%);
 }
 
-.content{
-  background: linear-gradient(to bottom, #070F2B, #000000);
+.content {
+  background: linear-gradient(to bottom, #070f2b, #000000);
   color: white;
 }
 
@@ -327,7 +333,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   width: 200px;
-  min-height: 250px;
+  min-height: 300px;
   text-align: center;
   background: linear-gradient(to right bottom, #9e66c6, #6027e1);
   color: white;
@@ -337,7 +343,7 @@ body {
 
 /* Hover Effect for Larger Screens */
 .product-box:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -351,9 +357,8 @@ body {
 
   .product-box {
     width: 90%; /* Adjust width for better responsiveness */
-    max-width: 400px; /* Limit maximum width */
+    max-width: 250px; /* Limit maximum width */
     margin-bottom: 20px; /* Space between products */
-    /* Scale down the hover effect to fit within the viewport */
     transition: transform 0.3s, box-shadow 0.3s;
   }
 
@@ -361,7 +366,6 @@ body {
     transform: scale(1.2); /* Reduce scale to fit smaller screens */
   }
 }
-
 
 .product-box h3 {
   margin-bottom: 10px;
@@ -390,50 +394,27 @@ body {
 .button-wrapper button:hover {
   background: #0056b3;
 }
+.product-box a {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
 
-
-
-
+.product-box a:hover {
+  background-color: #0056b3;
+}
 
 /* Footer */
 .footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #000;
+  background-color: #333;
   color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .hamburger-menu {
-    display: block;
-  }
-
-  .nav-list {
-    display: none;
-  }
-
-  .overlay-menu {
-    display: flex;
-  }
-
-  .container {
-    padding: 0 10px;
-  }
-
-  .row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .subheadline {
-    margin-bottom: 20px;
-  }
+.footer p {
+  margin: 0;
 }
-
-@media (max-width: 480px) {
-  .subheadline h1 {
-    font-size: 1.2rem;
-  }
-}
-
